@@ -13,6 +13,7 @@ body {
 
 :root {
     --header-bg: #10375c;
+    --primary-color: #2e80ce;
 }
 
 /* Common */
@@ -27,11 +28,40 @@ a {
     margin: 0 auto;
 }
 
+.btn {
+    --height: 60px;
+
+    display: inline-block;
+    height: var(--height);
+    min-width: 205px;
+    padding: 0 20px;
+    background: var(--primary-color);
+    text-align: center;
+    line-height: var(--height);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    border-radius: 99px;
+    border: 1px solid var(--primary-color);
+}
+
+.btn:hover {
+    background: transparent;
+    color: #ccc;
+    cursor: pointer;
+}
+
 /* Header */
 .header {
     background: var(--header-bg);
     min-height: 100vh;
     padding-top: 38px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -78,4 +108,47 @@ a {
 .logo__brand--small {
     font-size: 1.4em;
     font-weight: 300;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 42px;
+}
+
+.navbar__link {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #c9d2da;
+}
+
+.navbar__item:hover,
+.navbar__link--active {
+    text-shadow: 1px 0 0 #fff;
+}
+
+.navbar__link--active::before {
+    position: relative;
+    content: "";
+    display: inline-block;
+    top: -4px;
+    left: -8px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+}
+
+.action__login {
+    margin-right: 28px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #c9d2da;
+}
+
+.action__signup {
+    --height: 44px;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    min-width: 105px;
 }
