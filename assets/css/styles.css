@@ -325,3 +325,59 @@ a {
 .service__list {
     margin-bottom: 55px;
 }
+
+/* How it works */
+.how-it-works {
+    background: #f6fbff;
+    padding: 100px 0;
+}
+
+.how-it-works__desc {
+    width: 468px;
+}
+
+.how-it-works__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-top: 70px;
+}
+
+.how-it-works-item {
+    padding: 42px;
+    border: 16px solid #eaf6ff;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+
+.how-it-works-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-16px);
+}
+
+.how-it-works-item:hover .how-it-works-item__detail {
+    color: var(--primary-color);
+}
+
+.how-it-works-item__title {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1.38;
+    color: #10375c;
+}
+
+.how-it-works-item__desc,
+.how-it-works-item__detail {
+    width: 254px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #575f66;
+}
+
+.how-it-works-item__detail {
+    display: inline-block;
+    margin-top: 18px;
+}
